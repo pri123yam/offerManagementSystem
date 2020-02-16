@@ -8,37 +8,43 @@
 
             <div class="left-navigation">
                 <ul class="list">
-                    <h5><strong>OFFER</strong></h5>
-                    <li routerLinkActive="active"><a routerLink="/createoffer">CREATE OFFER</a></li>
-                    <li routerLinkActive="active"><a routerLink="/viewoffer">VIEW OFFER</a></li>
-                </ul>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        OFFER
-                    </button>
-                    <div class="dropdown-menu">
-                        <li routerLinkActive="active"><a routerLink="/createoffer">CREATE OFFER</a></li>
-                        <li routerLinkActive="active"><a routerLink="/viewoffer">VIEW OFFER</a></li>
-                    </div>
-                </div>
-                 <div class="btn-group">
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        OFFER
-                    </button>
-                    <div class="dropdown-menu">
-                        <li routerLinkActive="active"><a routerLink="/createoffer">CREATE OFFER</a></li>
-                        <li routerLinkActive="active"><a routerLink="/viewoffer">VIEW OFFER</a></li>
-                    </div>
-                </div>
-                <ul class="list">
-                    <h5><strong>TACTICS</strong></h5>
-                    <li routerLinkActive="active"><a routerLink="/createTactics">CREATE TACTICS</a></li>
-                    <li routerLinkActive="active"><a routerLink="/viewTactics">VIEW TACTICS</a></li>
+                    <li routerLinkActive="active"><a routerLink="/dashboard"><span
+                                class="glyphicon glyphicon-home"></span> DASHBOARD</a></li>
                 </ul>
 
-               
+                <ul class="list">
+                    <h5 data-toggle="collapse" href="#collapseoffer" role="button" aria-expanded="false"
+                        aria-controls="collapseoffer"><strong><span class="glyphicon glyphicon-shopping-cart"></span>
+                            OFFER</strong></h5>
+                    <div class="collapse" id="collapseoffer" style="background-color: rgb(48,48,48);">
+
+                        <li routerLinkActive="active" style="margin-left: 20%;"><a routerLink="/createoffer"><span
+                                    class="glyphicon glyphicon-tag"></span> CREATE OFFER</a></li>
+                        <li routerLinkActive="active" style="margin-left: 20%;"><a routerLink="/viewoffer"><span
+                                    class="glyphicon glyphicon-tag"></span> VIEW OFFER</a></li>
+
+                    </div>
+                </ul>
+
+                <ul class="list">
+                    <h5 data-toggle="collapse" href="#collapsetactic" role="button" aria-expanded="false"
+                    aria-controls="collapsetactic"><strong><span class="glyphicon glyphicon-bookmark"></span> TACTICS</strong></h5>
+                    <div class="collapse" id="collapsetactic" style="background-color: rgb(48,48,48);">
+                    <li routerLinkActive="active" style="margin-left: 20%;"><a routerLink="/createTactics"><span
+                                class="glyphicon glyphicon-tag"></span> CREATE TACTICS</a></li>
+                    <li routerLinkActive="active" style="margin-left: 20%;"><a routerLink="/viewTactics"><span
+                                class="glyphicon glyphicon-tag"></span> VIEW TACTICS</a></li>
+                    </div>
+                </ul>
+
+                <ul class="list">
+                    <li routerLinkActive="active"><a routerLink="/dashboard"><span
+                                class="glyphicon glyphicon-send"></span> ABOUT</a></li>
+                    <li routerLinkActive="active"><a routerLink="/dashboard"><span
+                                class="glyphicon glyphicon-earphone"></span> CONTACT</a></li>
+
+                </ul>
+
             </div>
 
         </div>
