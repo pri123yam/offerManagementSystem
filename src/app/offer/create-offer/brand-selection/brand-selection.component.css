@@ -1,3 +1,23 @@
+.parent{
+  overflow: hidden;
+  z-index: 1000;
+}
+.background-image {
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -500;
+  display: block;
+  margin-left: -10%;
+  margin-top: -10%;
+  background-image: url("../../../../assets/picture/aerial-photography-of-cars-on-road-intersection-186537.jpg");
+  width: 1400px;
+  height: 8000px;
+  /* -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px); */
+}
 .brand_container
 {
     
@@ -12,37 +32,30 @@
     font-size: 20px;
     /* //height: 200px;  */
     color:#001f3f;    
+    margin-right: 10%;
 } 
-/* .brand-row
-{
-    align-items: center;
-} */
+.card{
+  box-shadow: 20px 10px 10px rgba(0,0,0,0.2);
+  margin:2%;
+  padding:2%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;;
+  margin-right: 10%;
+  transition: 0.5s;
+  width:80%;
+}
 
-/* .my-button {
-  position: absolute;
-  bottom: 0px;
-  left: 70%;
-  transform: translateX(-50%);
-} */
-
-/* <a> propety change */
-/* unvisited link */
-
-/* visited link */
-/* a:visited {
-  color: white;
-} */
-
-/* mouse over link */
-/* a:hover {
-  color: rgb(102, 255, 0);
-  text-decoration: none;
-} */
-
-/* selected link */
-/* a:active {
-  color: blue;
-} */
+.card:hover{
+  box-shadow: -20px -10px 40px rgba(0,0,0,0.4);
+  transform: scale(1,1);
+  background-color: gray;
+  margin-left: 2%;
+  width: 85%;
+  z-index: 10;
+  overflow:inherit;
+  border-radius: 15px;
+}
 .geo_container
 {
     
@@ -65,9 +78,8 @@
   top: 110%;
   left:100%;
   transform: translateX(-50%);
+  margin-top: -5%;
 }
-
-.mandatory
-{
+.mandatory{
   color: red;
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CarManagement": {
+    "OfferManagement": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/CarManagement",
+            "outputPath": "dist/OfferManagement",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "/home/pratik/Project/CarManagement/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "/Users/pri_1234/Desktop/dev/OfferManagement/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CarManagement:build"
+            "browserTarget": "OfferManagement:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CarManagement:build:production"
+              "browserTarget": "OfferManagement:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CarManagement:build"
+            "browserTarget": "OfferManagement:build"
           }
         },
         "test": {
@@ -112,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CarManagement:serve"
+            "devServerTarget": "OfferManagement:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "CarManagement:serve:production"
+              "devServerTarget": "OfferManagement:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "CarManagement"
+  "defaultProject": "OfferManagement"
 }

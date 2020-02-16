@@ -1,107 +1,101 @@
-<div class="container">
-    <div class="page-header">
-        <h2>Vehicle Category Selection : </h2>
-    </div>
-    <div class="row justify-content-between align-items-center brand-row brand_container">
-        <div class="col-md-2">
-            <div class="text-primary">
-                <!-- <h2>Select The Brand:</h2> -->
-            </div>
-            <div class="form-group">
-                <label for="sel1">Brand: <span class="mandatory ">*</span></label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.brand" id="brand" type="text"
-                    (change)="onSelectBrand($event)" required>
-                    <option value=""  >Select Brand</option>
-                    <option *ngFor="let sbrand of sortedBrand" value={{sbrand}}>{{ sbrand }}</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <!-- <div class="text-primary">
-             <h2>Select The Brand:</h2> 
-            </div> -->
-            <div class="form-group">
-                <label for="sel1">Model:<span class="mandatory ">*</span></label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.model" id="brand" type="text"
-                    (change)="onSelectModel()" required>
-                    <option value="" selected >Select Model</option>
-                    <!-- <option>BMW</option>
-                  <option>HONDA</option>
-                  <option>YAMAHA</option>
-                  <option>ODDI</option> -->
-                    <option  *ngFor="let smodel of sortedModel" value={{smodel}}>{{ smodel }}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <!-- <div class="text-primary">
-             <h2>Select The Brand:</h2> 
-            </div> -->
-            <div class="form-group">
-                <label for="sel1">Body Model:<span class="mandatory">*</span></label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.bodyModel" id="brand" type="text"
-                    (change)=onSelectBodyModel() required>
-                    <option value="" selected>Select BodyModel</option>
-                    <option  *ngFor="let sbmodel of sortedBodyModel" value={{sbmodel}}>{{ sbmodel }}</option>
-                    
-                </select>
+<div class="background-image"></div>
+<div class="parent">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Vehicle Category Selection : </h2>
+            <div class="container brand_container">
+                <div class="row justify-content-between align-items-center brand-row brand_container">
+                    <div class="col-md-2">
+                        <div class="text-primary">
+                        </div>
+                        <div class="form-group">
+                            <label for="sel1">Brand: <span class="mandatory ">*</span></label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.brand" id="brand" type="text"
+                                (change)="onSelectBrand($event)" required>
+                                <option value="">Select Brand</option>
+                                <option *ngFor="let sbrand of sortedBrand" value={{sbrand}}>{{ sbrand }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sel1">Model:<span class="mandatory ">*</span></label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.model" id="brand" type="text"
+                                (change)="onSelectModel()" required>
+                                <option value="" selected>Select Model</option>
+                                <option *ngFor="let smodel of sortedModel" value={{smodel}}>{{ smodel }}</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sel1">Body Model:<span class="mandatory">*</span></label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.bodyModel" id="brand" type="text"
+                                (change)=onSelectBodyModel() required>
+                                <option value="" selected>Select BodyModel</option>
+                                <option *ngFor="let sbmodel of sortedBodyModel" value={{sbmodel}}>{{ sbmodel }}</option>
+    
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- geo selection start -->
-</div>
-<div class="container geo_container">
-    <div class="page-header">
-        <h2 style="color: black;">Geography Location Selection : </h2>
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Geography Location Selection : <span class="mandatory">*</span> </h2>
+            <div class="container geo_container">
+                <div class="row justify-content-between align-items-center geo-row brand_container ">
+                    <div class="col-md-2">
+                        <div class="text-primary">
+                        </div>
+                        <div class="form-group">
+                            <label for="sel1">State:</label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.state" id="state" type="text"
+                                (change)="onSelectState()" multiple>
+                                <option value="" selected>Select State</option>
+                                <option *ngFor="let sstate of sortedState" value={{sstate}}>{{ sstate }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sel1">District:</label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.district" id="district" type="text"
+                                (change)="onSelectDistrict()" multiple>
+                                <option value="" selected>Select District</option>
+                                <option *ngFor="let sdist of sortedDistrict" value={{sdist}}>{{ sdist }}</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="sel1">City:</label>
+                            <select class="form-control" [(ngModel)]="selectedModelGeo.city" id="city" type="text"
+                                (change)="onSelectCity()" multiple>
+                                <option value="" selected>Select City</option>
+                                <option *ngFor="let scity of sortedCity" value={{scity}}>{{ scity }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row justify-content-between align-items-center geo-row brand_container ">
-        <div class="col-md-2">
-            <div class="text-primary">
+    
+    <div class="container-fluid">
+        <div class="row next-button">
+            <div class="col-md-12">
+                <button class="btn btn-primary nav-item nav-link-edit " type="button" id="next-btn"
+                    [routerLink]="['sLease']" style="color: white;"
+                    [disabled]="(!selectedModelGeo.brand || !selectedModelGeo.model || 
+                    !selectedModelGeo.bodyModel) || !(selectedModelGeo.state || selectedModelGeo.district || selectedModelGeo.city)" (click)="finalJson()">
+                    Next >>
+                </button>
             </div>
-            <div class="form-group">
-                <label for="sel1">State:</label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.state" id="state" type="text"
-                    (change)="onSelectState()" multiple>
-                    <option value="" selected >Select State</option>
-                    <option *ngFor="let sstate of sortedState" value={{sstate}}>{{ sstate }}</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="sel1">District:</label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.district" id="district" type="text"
-                    (change)="onSelectDistrict()" multiple>
-                    <option value="" selected >Select District</option>
-                    <option  *ngFor="let sdist of sortedDistrict" value={{sdist}}>{{ sdist }}</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="sel1">City:</label>
-                <select class="form-control" [(ngModel)]="selectedModelGeo.city" id="city" type="text" (change)="onSelectCity()" multiple>
-                    <option value="" selected >Select City</option>
-                    <option  *ngFor="let scity of sortedCity" value={{scity}}>{{ scity }}</option>
-                </select>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="row next-button">
-        <div class="col-md-12">
-            <button class="btn btn-primary nav-item nav-link-edit " type="button" id="next-btn"
-                [routerLink]="['sLease']" style="color: white;"
-                [disabled]= "(!selectedModelGeo.brand || !selectedModelGeo.model || 
-                !selectedModelGeo.bodyModel) || !(selectedModelGeo.state || selectedModelGeo.district || selectedModelGeo.city)"
-                (click)="finalJson()">
-                Next >>
-            </button>
         </div>
     </div>
 </div>
