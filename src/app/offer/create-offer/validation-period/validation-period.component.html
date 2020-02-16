@@ -1,0 +1,53 @@
+
+<div class = "page-header val-head">
+   <h2>
+      Select The Validation Period :
+    </h2>
+</div>
+
+<div class="container validation_container">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- start the form -->
+
+            <form class="form-horizontal">
+              
+                <div class="form-group">
+                    <label class="control-label col-sm-4">Select Offer Start Date:</label>
+                    <div class="col-sm-6">
+                      <input type="datetime-local" class="form-control" id="start" placeholder="DD/MM/YYYY, --:-- --" [(ngModel)]="valid.start" name="valid.start">
+                    </div>
+                  </div>
+
+               
+                  <div class="form-group">
+                    <label class="control-label col-sm-4">Select Offer End Date:</label>
+                    <div class="col-sm-6">
+                      <input type="datetime-local" class="form-control" id="end" placeholder="DD/MM/YYYY, --:-- --" [(ngModel)]="valid.end" name="valid.end">
+                    </div>
+                  </div>
+
+            </form>
+        </div>
+    </div>
+  
+
+</div>
+
+   <!-- button added -->
+   <div class="row btn-container">
+    <div class="col-md-6 prev-button">        
+     <button class="btn btn-primary nav-item nav-link-edit " 
+         type="button" id="prev-btn"  [routerLink]="['../']" style="color: white;"> 
+         << Previous 
+     </button> 
+ </div>
+
+  <div class="col-md-6 next-button">        
+     <button class="btn btn-primary nav-item nav-link-edit " 
+         type="button" id="next-btn"  [routerLink]="['../preview']" style="color: white;" (click)="check()"> 
+         Next >> 
+     </button> 
+ </div>
+
+</div>

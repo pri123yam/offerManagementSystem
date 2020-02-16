@@ -1,0 +1,73 @@
+.brand_container
+{
+    
+    /* background-color: azure;  */
+  /* padding-top: 0px; */
+  /* padding-right: 30px; */
+  /* padding-bottom: 60px; */
+     /* margin-left:-5%; */
+    /* padding: 0 80px;  */
+    /* width: 80%; */
+    font-family: Segoe UI;
+    font-size: 20px;
+    /* //height: 200px;  */
+    color:#001f3f;    
+} 
+/* .brand-row
+{
+    align-items: center;
+} */
+
+/* .my-button {
+  position: absolute;
+  bottom: 0px;
+  left: 70%;
+  transform: translateX(-50%);
+} */
+
+/* <a> propety change */
+/* unvisited link */
+
+/* visited link */
+/* a:visited {
+  color: white;
+} */
+
+/* mouse over link */
+/* a:hover {
+  color: rgb(102, 255, 0);
+  text-decoration: none;
+} */
+
+/* selected link */
+/* a:active {
+  color: blue;
+} */
+.geo_container
+{
+    
+    /* background-color: azure;  */
+  /* padding-top: 0px; */
+  /* padding-right: 30px; */
+  /* padding-bottom: 100px; */
+  /* padding-left: 30px; */
+    /* padding: 0 80px;  */
+    /* width: 80%; */
+    font-family: Segoe UI;
+    font-size: 20px;
+    /* //height: 200px;  */
+    color: #001f3f;    
+} 
+
+.next-button
+{
+  position: absolute;
+  top: 110%;
+  left:100%;
+  transform: translateX(-50%);
+}
+
+.mandatory
+{
+  color: red;
+}

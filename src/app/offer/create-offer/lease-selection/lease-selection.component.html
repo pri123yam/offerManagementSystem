@@ -1,0 +1,112 @@
+<!-- <nav class="navbar navbar-default menu">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a routerLink="../sLease">Lease</a></li>
+      <li routerLinkActive="active"><a routerLink="../sTactic">Tactic</a></li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary menu">
+  <a class="navbar-brand" href="#">Lease/Tactic</a>
+  <!-- Chose Lease or Tactic -->
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="../sLease">Lease</a></li>
+        <li routerLinkActive="active"><a routerLink="../sTactic">Tactic</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container lease_container">
+  <div class="row">
+    <div class="col-md-8">
+      <!-- start the form -->
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-4" >Amount:</label>
+          <div class="col-sm-8">
+            <input type="number"  min="0" class="form-control" name="lease.amount" placeholder="Enter Amount" [(ngModel)]="lease.amount">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Downpayment:</label>
+          <div class="col-sm-8">
+            <input type="number" min="0" class="form-control" id="downpayment" name="lease.downpayment" placeholder="Enter Downpayment" [(ngModel)]="lease.downpayment">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Remaining Amount:</label>
+          <div class="col-sm-8">
+            <input type="number" min="0" class="form-control" id="ramount" name="lease.remainingAmount" placeholder="Enter Remaining Amount" [(ngModel)]="lease.remainingAmount">
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-4">Term:</label>
+          <div class="col-sm-8">
+            <!-- <input type="text" class="form-control" id="ramount" placeholder="Select Term"> -->
+            <select class="form-control" id="term" [(ngModel)]="lease.term" name="lease.term" >
+  
+              <option disabled>Select Term</option>
+              <option>Monthly</option>
+              <option>Quarterly</option>
+              <option>Half-Yearly</option>
+              <option>Yearly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-4">Rate:</label>
+          <div class="col-sm-8">
+            <!-- <input type="text" class="form-control" id="ramount" placeholder="Select Term"> -->
+            <select class="form-control" id="rate" [(ngModel)]="lease.rate" name="lease.rate">
+              <option disabled>Select Rate</option>
+              <option>8</option>
+              <option>8.5</option>
+              <option>10</option>
+              <option>11</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-4">Bank:</label>
+          <div class="col-sm-8">
+            <!-- <input type="text" class="form-control" id="ramount" placeholder="Select Term"> -->
+            <select class="form-control" id="bank" [(ngModel)]="lease.bank" name="lease.bank">
+              <option disabled>Select Bank</option>
+              <option>SBI</option>
+              <option>HDFC</option>
+              <option>AXIS</option>
+              <option>UBI</option>
+            </select>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- button added -->
+  <div class="row prev-button">
+    <div class="col-md-12">
+   
+      <button class="btn btn-primary nav-item nav-link-edit " type="button" id="prev-btn" [routerLink]="['../']"
+        style="color: white;">
+        << Previous </button> </div> </div> <div class="row next-button">
+          <div class="col-md-12">
+        
+            <button class="btn btn-primary nav-item nav-link-edit " type="button" id="next-btn" [routerLink]="['../valDate']"
+              style="color: white;" (click)="check()">
+              Next >>
+            </button>
+          </div>
+
+    </div>
+
+  </div>

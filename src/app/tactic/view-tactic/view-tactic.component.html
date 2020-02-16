@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Tactic Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Amount</th>
+        <th>Non-monetary Amount</th>
+        <th>Notes</th>
+        <th>Messages</th>
+        <th>Creation Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tactic of tactics" class="table-primary">
+        <td>{{tactic.tacticName}}</td>
+        <td>{{tactic.tacticType}}</td>
+        <td>{{tactic.startDate}}</td>
+        <td>{{tactic.endDate}}</td>
+        <td>{{tactic.monetaryAmt}}</td>
+        <td>{{tactic.nonMonetaryAmt}}</td>
+        <td>{{tactic.notes}}</td>
+        <td>{{tactic.messages}}</td>
+        <td>{{tactic.tacticCreationTime}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

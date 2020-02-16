@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "/Users/pri_1234/Desktop/dev/OfferManagement/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
