@@ -1,3 +1,9 @@
 #display-body{
     margin-top: 10%;
+    
+}
+
+div.disabled {
+    overflow-x: hidden; 
+    overflow-y: scroll; 
 }

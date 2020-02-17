@@ -1,27 +1,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <app-header ></app-header>
+      <app-header></app-header>
     </div>
   </div>
 </div>
 
-<!-- <app-side-navigation (selected)="onNavigate($event)"></app-side-navigation> -->
 
-<!-- <div style = "position:relative; left:205px; top:80px;">
-  This div has relative positioning.
-</div> -->
-<app-side-navigation></app-side-navigation>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-sm-10" id="display-body">
-        <!-- <app-create-offer *ngIf="loadedFeature==='creating'"></app-create-offer>
+    <div class="col-md-2">
+      <app-side-navigation></app-side-navigation>
+    </div>
+    <div class="col-md-10" id="display-body">
+      <!-- <app-create-offer *ngIf="loadedFeature==='creating'"></app-create-offer>
         <app-show-offer *ngIf="loadedFeature==='viewing'"></app-show-offer> -->
-        <router-outlet></router-outlet>
-        
+      <router-outlet></router-outlet>
+
     </div>
   </div>
-  
+
 </div>
