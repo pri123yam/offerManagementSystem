@@ -1,5 +1,5 @@
 <div class="container">
-  <table class="table">
+  <table class="table table-condensed table-hover table-bordered">
     <thead>
       <tr>
         <th>Name</th>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tactic of tactics" class="table-primary">
+      <tr *ngFor="let tactic of tactics">
         <td>{{tactic.tacticName}}</td>
         <td>{{tactic.tacticType}}</td>
         <td>{{tactic.startDate}}</td>

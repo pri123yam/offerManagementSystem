@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,8 @@ import { TacticSelectionComponent } from './offer/create-offer/tactic-selection/
 import { CreateTacticComponent } from './tactic/create-tactic/create-tactic.component';
 import { ValidationPeriodComponent } from './offer/create-offer/validation-period/validation-period.component';
 import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-all.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-al
     TacticSelectionComponent,
     ViewTacticComponent,
     CreateTacticComponent,
+    // MatInputModule,
     ValidationPeriodComponent,
     PreviewAllComponent
   ],
@@ -40,7 +43,9 @@ import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-al
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

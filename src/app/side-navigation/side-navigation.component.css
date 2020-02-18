@@ -5,7 +5,7 @@
     margin-top: 5%;
     position: absolute;
     height: 100%;
-    background-color: rgb(48,48,48);
+    background-color: #beafafda;
 }
 
 
@@ -13,7 +13,7 @@
 
 
 .logo {
-    max-height: 130px;
+    max-height: 150px;
 }
 .logo>img {
     margin-top: 30%;

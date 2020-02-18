@@ -5,6 +5,9 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Bike } from 'src/app/model/Bike/bike';
 import { Model_Geo } from 'src/app/model/Model-Geo/mod_geo';
 import { InteractionService } from 'src/app/interaction.service';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
+
+
 
 @Component({
   selector: 'app-brand-selection',
@@ -52,15 +55,15 @@ export class BrandSelectionComponent implements OnInit {
 
   ngOnInit() {
     
-    //  if(this.flag===0)
-    //  {
-        // this.selectedModelGeo.brand="";
-        // this.selectedModelGeo.model="";
-        // this.selectedModelGeo.bodyModel="";
-        // this.selectedModelGeo.state="";
-        // this.selectedModelGeo.district="";
-        // this.selectedModelGeo.city="";
-    //  }
+     if(this.flag===0)
+     {
+        this.selectedModelGeo.brand="";
+        this.selectedModelGeo.model="";
+        this.selectedModelGeo.bodyModel="";
+        this.selectedModelGeo.state="";
+        this.selectedModelGeo.district="";
+        this.selectedModelGeo.city="";
+     }
     
 
       //# Data Read And Brand Sorted Display
@@ -167,7 +170,8 @@ export class BrandSelectionComponent implements OnInit {
 
   onSelectState()
   {
-
+    console.warn("inside state");
+    console.log(this.selectedModelGeo.state);
     if(this.selectedModelGeo.state=="")
     {
       this.sortedDistrict=this.constdist;
@@ -257,6 +261,7 @@ export class BrandSelectionComponent implements OnInit {
   {
     console.warn("Inside Model-Geo Final Json");
     console.warn(this.selectedModelGeo);
+  
     this.iservice.sendModelGeo(this.selectedModelGeo);
   }
   
