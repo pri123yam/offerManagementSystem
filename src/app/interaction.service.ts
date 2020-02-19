@@ -14,7 +14,7 @@ export class InteractionService {
 
   sendModelGeo(message : Model_Geo){
 
+    console.log(this.modelgeo$);
     this.modelgeosource.next(message);
-
   }
 }

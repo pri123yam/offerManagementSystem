@@ -1,3 +1,8 @@
+.card{
+  border-radius: 5px;
+  perspective: 1px;
+  border-collapse: separate; 
+}
 .menu
 {  
     font-family: Segoe UI;

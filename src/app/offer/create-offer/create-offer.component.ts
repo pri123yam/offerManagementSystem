@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model_Geo } from 'src/app/model/Model-Geo/mod_geo';
 
 @Component({
   selector: 'app-create-offer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateOfferComponent implements OnInit {
 
+  // alreadySelectedModelGeo : Model_Geo;
   constructor() { }
 
   ngOnInit() {
   }
-
+  // receiveSelectedModelGeo($event){
+  //   this.alreadySelectedModelGeo = $event;
+  //   console.log(this.alreadySelectedModelGeo);
+  // }
 }
