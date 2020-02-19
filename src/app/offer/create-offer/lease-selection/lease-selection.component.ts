@@ -13,11 +13,15 @@ export class LeaseSelectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+       this.lease.bank="";
+       this.lease.term="";
+       this.lease.rate=0;
   }
 
-  onChange()
+  onChangeBank()
   {
-    console.log(this.lease.amount);
+    console.log(this.lease.bank);
   }
   check()
   {

@@ -18,6 +18,8 @@ export class TacticSelectionComponent implements OnInit {
 
   ngOnInit() {
 
+    this.stactic.tactic="";
+
     this.tac.getAllTactics().subscribe(data=>
       {this.alltactic=data;
        console.log(data)

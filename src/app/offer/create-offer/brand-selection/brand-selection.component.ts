@@ -9,6 +9,7 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 
 
+
 @Component({
   selector: 'app-brand-selection',
   templateUrl: './brand-selection.component.html',
@@ -50,10 +51,14 @@ export class BrandSelectionComponent implements OnInit {
   constcity =[];
   constdist=[];
   conststate=[];
+
+  // dropdownSettings = {};
   
   constructor(private iservice : InteractionService,private brnd: BrandServiceService) { }
 
   ngOnInit() {
+
+    
     
      if(this.flag===0)
      {
@@ -121,6 +126,7 @@ export class BrandSelectionComponent implements OnInit {
     this.sortedModel=[];
     this.sortedBodyModel=null;
 
+
     console.info(this.selectedModelGeo.brand);
     for(var i=0;i<this.bikeinfo.length;i++)
       {
@@ -171,7 +177,7 @@ export class BrandSelectionComponent implements OnInit {
   onSelectState()
   {
     console.warn("inside state");
-    console.log(this.selectedModelGeo.state);
+    console.log(this.selectedModelGeo.state.length);
     if(this.selectedModelGeo.state=="")
     {
       this.sortedDistrict=this.constdist;
