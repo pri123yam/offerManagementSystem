@@ -1,0 +1,39 @@
+.form{
+    margin:5%;
+    padding: 5%;
+    background-color: #FAF8F8;
+    box-shadow: 10px 10px 10px #7F7F7F;
+    border-radius: 20px;
+    transition-duration: 300ms;
+}
+.form:hover{
+    margin:5%;
+    padding: 5%;
+    background-color: #FFFFFF;
+    box-shadow: 20px 20px 10px #7F7F7F;
+    border-radius: 20px;
+}
+
+.formfieldset{
+    border: #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    box-shadow:  0px 0px 0px 0px #000;
+}
+.formlegend{
+    width:inherit; 
+    padding:10px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+.btn{
+    background-color:#E3E3E3;
+    transition: all 0.3s;
+    margin-top: 5%;
+}
+.btn:hover{
+    box-shadow: 10px 10px 10px #7f7f7f;
+}
+input:hover{
+    box-shadow: 10px 10px 10px #E3E3E3
+}

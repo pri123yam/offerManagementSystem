@@ -1,4 +1,4 @@
-.card{
+/* .card{
   border-radius: 5px;
   perspective: 1px;
   border-collapse: separate; 
@@ -13,13 +13,22 @@
 
 .lease_container
 {
-    /* padding-top: 0px; */
     padding-right: 30px;
     padding-left: 130px;
     font-family: Segoe UI;
     font-size: 18px;
+}*/
+a{
+  color: white;
 }
 
+a:hover{
+  color : black;
+}
+#lease{
+  background-color:#C1C0C0;
+  /* border: 10px solid green; */
+}
 .prev-button {
     position: absolute;
     top : 120%;
@@ -35,7 +44,7 @@
     left: 85%;
     transform: translateX(-50%);
   }
-  a
+  /*a
   {
     color: white;
-  }
+  } */

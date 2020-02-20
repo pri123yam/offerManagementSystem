@@ -1,13 +1,17 @@
 .menu
 {  
-    font-family: Segoe UI;
-    font-size: 16px;
+    /* font-family: Segoe UI;
+    font-size: 16px; */
     color: white;
 
 }
 
 a{
   color: white;
+}
+
+a:hover{
+  color : black;
 }
 
 .tactic_container
@@ -33,4 +37,7 @@ a{
     bottom: 0px;
     left: 85%;
     transform: translateX(-50%);
+  }
+  #tactic{
+    background-color:#C1C0C0;
   }

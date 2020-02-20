@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ValDate } from 'src/app/model/Vdate/valDate';
+import {Location} from '@angular/common';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class ValidationPeriodComponent implements OnInit {
 
   
 
-  constructor() { }
+  constructor(private loc : Location) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,9 @@ export class ValidationPeriodComponent implements OnInit {
   {
     console.warn(this.valid);
     
+  }
+  goBack(){
+    this.loc.back();
   }
 
 }

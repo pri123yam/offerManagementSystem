@@ -1,6 +1,7 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { Lease } from 'src/app/model/Lease/lease';
 import { Model_Geo } from 'src/app/model/Model-Geo/mod_geo';
+import { CreateOfferDataService } from 'src/app/all_Services/create-offer-data.service';
 
 @Component({
   selector: 'app-lease-selection',
@@ -11,17 +12,17 @@ export class LeaseSelectionComponent implements OnInit {
 
   Amount: number;
   lease : Lease=new Lease();
-  constructor() { }
+  constructor(private dataService : CreateOfferDataService) { }
   ngOnInit() {
+    console.log(this.dataService.getLeaseData());
+    this.lease = this.dataService.getLeaseData();
   }
 
   onChange()
   {
     console.log(this.lease.amount);
   }
-  check()
-  {
-    console.log(this.lease);
+  leaseSubmission(){
+    this.dataService.setLeaseData(this.lease);
   }
-
 }
