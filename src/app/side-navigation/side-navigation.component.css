@@ -1,33 +1,29 @@
-
- 
- .sidebar{
+.sidebar{
    
-    margin-top: 5%;
+    margin-top: 4%;
     position: absolute;
     height: 100%;
-    background-color: #beafafda;
+    background-color:gray;
 }
-
-
-
-
-
+/* 
+.sidebar1:hover
+{
+    left: -20px;
+} */
 .logo {
-    max-height: 150px;
+    max-height: 130px;
 }
 .logo>img {
-    margin-top: 30%;
+    margin-top: 10%;
+    /* padding: 3px; */
     border: 3px solid white;
     border-radius: 100%;
 }
-
 .list {
     color: #fff;
     list-style: none;
     padding-left: 0px;
-    
 }
-
 .list::first-line {
     color: rgba(255, 255, 255, 0.5);
 }
@@ -42,33 +38,22 @@
     padding-left: 35px;
 }
 
-.list>h5:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-left: 5px solid white;
-    color: white;
-    font-weight: bolder;
-    padding-left: 35px;
-}
-
 a,li:visited {
     color: white;
     text-decoration: none;
   }
   
-  
+  /* mouse over link */
   a:hover {
     color: green;
     text-decoration: none;
   }
   
-
-   a:active {
+  /* selected link */
+  a:active {
     color: rgb(230, 216, 27);
     text-decoration: none;
   }
-
   .btn-group{
       display:flex;
-  } 
-
- 
+  }

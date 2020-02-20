@@ -11,6 +11,7 @@ import {ViewTacticComponent} from './tactic/view-tactic/view-tactic.component';
 import { CreateTacticComponent } from './tactic/create-tactic/create-tactic.component';
 import { ValidationPeriodComponent } from './offer/create-offer/validation-period/validation-period.component';
 import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-all.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'viewTactics', component: ViewTacticComponent},
   {path:'createTactics', component: CreateTacticComponent},
   {path:'createoffer/valDate', component: ValidationPeriodComponent},
-  {path:'createoffer/preview', component: PreviewAllComponent}
+  {path:'createoffer/preview', component: PreviewAllComponent},
+  {path:'**',component: PageNotFoundComponent}
 
 ];
 

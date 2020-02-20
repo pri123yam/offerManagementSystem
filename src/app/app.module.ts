@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { TacticSelectionComponent } from './offer/create-offer/tactic-selection/
 import { CreateTacticComponent } from './tactic/create-tactic/create-tactic.component';
 import { ValidationPeriodComponent } from './offer/create-offer/validation-period/validation-period.component';
 import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-all.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
@@ -35,9 +36,9 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     TacticSelectionComponent,
     ViewTacticComponent,
     CreateTacticComponent,
-    // MatInputModule,
     ValidationPeriodComponent,
-    PreviewAllComponent
+    PreviewAllComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

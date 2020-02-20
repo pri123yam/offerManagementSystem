@@ -1,69 +1,114 @@
-<div class="container menu">
+<div class="card">
+  <div class="card-body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+      <a class="navbar-brand" href="#">Lease/Tactic</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <ul class="nav navbar-nav">
+            <li routerLinkActive="active" id="lease"><a routerLink="../sLease">Lease</a></li>
+            <li routerLinkActive="active" id ="tactic"><a routerLink="../sTactic">Tactic</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<div class="container tactic_container">
   <div class="row">
-    <div class="col-md-10">
-      <ul class="nav">
-        <li routerLinkActive="active"><a routerLink="../sLease">Lease</a></li>
-        <li routerLinkActive="active"><a routerLink="../sTactic">Tactic</a></li>
-      </ul>
+    <div class="col-md-9">
+      <!-- start the form -->
+
+      <form class="form-horizontal">
+
+        <div class="form-group">
+          <!-- <label class="control-label col-md-4">Tactic:</label> -->
+          <!-- <div class="col-sm-8">
+            
+            <select class="form-control" id="bank" [(ngModel)]="stactic.tactic" name="stactic.tactic">
+              <option disabled>Select Tactic</option>
+              <option *ngFor="let tac of alltactic" value={{tac.tacticName}}>{{tac.tacticName}}</option>
+            </select>
+          </div> -->
+          <table class="table table-condensed table-hover table-bordered table-responsive-md table-striped ">
+            <thead class="thead-dark">
+              <tr>
+                <th>Select</th>
+                <th>Name</th>
+                <th>Tactic Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Amount</th>
+                <th>Non-monetary Amount</th>
+                <th>Creation Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let tactic of alltactic" >
+                <td><input type="checkbox"/></td>
+                <td>{{tactic.tacticName}}</td>
+                <td>{{tactic.tacticType}}</td>
+                <td>{{tactic.startDate}}</td>
+                <td>{{tactic.endDate}}</td>
+                <td>{{tactic.monetaryAmt}}</td>
+                <td>{{tactic.nonMonetaryAmt}}</td>
+                <td>{{tactic.tacticCreationTime}}</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="text" class="form-control" id="amount" placeholder="Enter Remarks"
+              [(ngModel)]="stactic.remarks" name="stactic.remarks">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="text" class="form-control" id="amount" placeholder="Enter Marketing Message"
+              [(ngModel)]="stactic.remarks" name="stactic.remarks">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="text" class="form-control" id="amount" placeholder="Enter Notes"
+              [(ngModel)]="stactic.remarks" name="stactic.remarks">
+          </div>
+        </div>
+
+
+      </form>
     </div>
   </div>
-</div> 
-
-  <div class="container tactic_container">
-    <div class="row">
-        <div class="col-md-10">
-            <!-- start the form -->
-
-            <form class="form-horizontal">
-              
-                <div class="form-group">
-        
-                    <select class="form-control" id="bank" [(ngModel)]="stactic.tactic" name="stactic.tactic">
-                      <option value="">Select Tactic</option>
-                      <option *ngFor="let tac of alltactic" value={{tac.tacticName}}>{{tac.tacticName}}</option>
-                      
-                    </select>
-                  
-                </div>
-
-               
-                  <div class="form-group">
-                    
-                      <input type="text" class="form-control" id="amount" placeholder="Enter Remarks" [(ngModel)]="stactic.remarks" name="stactic.remarks">
-                    
-                  </div>
-
-            </form>
-        </div>
-    </div>
-     <!-- button added -->
-     <div class="row prev-button">
-      <div class="col-md-12">        
-       <!-- <button class="btn btn-primary  " 
+  <!-- button added -->
+  <div class="row prev-button">
+    <div class="col-md-12">
+      <!-- <button class="btn btn-primary  " 
            type="button" id="login-btn"routerLinkActive="active" style="color: white;"> 
            <a routerLink="/createoffer"> << Previous  </a>
        </button> -->
-       <button class="btn btn-primary nav-item nav-link-edit " 
-           type="button" id="prev-btn"  [routerLink]="['../']" style="color: white;"> 
-           << Previous 
-       </button> 
-   </div>
+      <button class="btn btn-secondary nav-item nav-link-edit " type="button" id="prev-btn" [routerLink]="['../']"
+        style="color: white;">
+        << Previous </button>
+    </div>
   </div>
-  
-  
+
+
 
   <div class="row next-button">
-      <div class="col-md-12">        
-       <!-- <button class="btn btn-primary  " 
+    <div class="col-md-12">
+      <!-- <button class="btn btn-primary  " 
            type="button" id="login-btn"routerLinkActive="active" style="color: white;"> 
            <a routerLink="/createoffer"> << Previous  </a>
        </button> -->
-       <button class="btn btn-primary nav-item nav-link-edit " 
-           type="button" id="next-btn"  [routerLink]="['../valDate']" style="color: white;" (click)="check()" > 
-           Next >> 
-       </button> 
-   </div>
-  
+      <button class="btn btn-secondary nav-item nav-link-edit " type="button" id="next-btn" [routerLink]="['../valDate']"
+        style="color: white;" (click)="tacticSubmission()">
+        Next >>
+      </button>
+    </div>
+
   </div>
 
 </div>
+  </div></div>
