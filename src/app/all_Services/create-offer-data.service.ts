@@ -4,6 +4,7 @@ import { Lease } from '../model/Lease/lease';
 import { Model_Geo } from '../model/Model-Geo/mod_geo';
 import { Tactic } from '../model/Tactic/tactic';
 import { STactic } from '../model/Tactic/select_tactic';
+import { ValDate } from '../model/Vdate/valDate';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class CreateOfferDataService {
   private selectedBrandGeoData = new Model_Geo();
   private leaseData = new Lease();
   private tacticData = new STactic;
+  private validDate =new ValDate();
   setBrandGeoData(val : any){
     this.selectedBrandGeoData = val;
   }
@@ -29,5 +31,13 @@ export class CreateOfferDataService {
   }
   getTacticData(){
     return this.tacticData;
+  }
+  setValidDate(val : any)
+  {
+    this.validDate=val;
+  }
+  getValDate()
+  {
+    return this.validDate;
   }
 }

@@ -1,4 +1,4 @@
-.val-head
+/* .val-head
 {
     margin-top: 0%;
 }
@@ -6,14 +6,43 @@
 .validation_container
 {
     margin-top: 7%;
-}
+} */
 
-.btn-container
+.card-body
 {
-    margin-top: 7%;
+    
+    box-shadow: 10px 10px 4px #888888;
 }
 
+.card-body:hover {
+   
+    box-shadow: -12px 12px 6px #817f7f;
+    border-radius: 1%;
+}
+
+.button
+{
+    margin-top: 6%;
+}
 .next-button
 {
-    left: 20%;
+    margin-left: 80%;
+    /* margin-top: 6%; */
+    
+}
+.prev-button
+{
+   /* margin-top: 7%; */
+    margin-left: 15%;
+}
+
+.val-container
+{
+    margin-top: 10%;
+    padding-right: 30px;
+    padding-left: 130px;
+    font-family: Arial;
+    font-size: 18px;
+    background-color: #F5F5F5;
+    border:none;
 }

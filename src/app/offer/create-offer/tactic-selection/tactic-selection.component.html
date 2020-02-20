@@ -28,8 +28,8 @@
               <option *ngFor="let tac of alltactic" value={{tac.tacticName}}>{{tac.tacticName}}</option>
             </select>
           </div> -->
-          <table class="table table-condensed table-hover table-bordered table-responsive-md table-striped ">
-            <thead class="thead-dark">
+          <table class="table table-condensed table-hover table-bordered my-custom-scrollbar ">
+            <thead class="thead-dark" >
               <tr>
                 <th>Select</th>
                 <th>Name</th>
@@ -41,9 +41,9 @@
                 <th>Creation Time</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               <tr *ngFor="let tactic of alltactic" >
-                <td><input type="checkbox"/></td>
+                <td><input type="checkbox" (change)="setName(tactic.dTacticId)" /></td>
                 <td>{{tactic.tacticName}}</td>
                 <td>{{tactic.tacticType}}</td>
                 <td>{{tactic.startDate}}</td>
@@ -60,20 +60,20 @@
 
         <div class="form-group">
           <div class="col-md-12">
-            <input type="text" class="form-control" id="amount" placeholder="Enter Remarks"
+            <input type="text" class="form-control"  placeholder="Enter Remarks"
               [(ngModel)]="stactic.remarks" name="stactic.remarks">
           </div>
         </div>
         <div class="form-group">
           <div class="col-md-12">
-            <input type="text" class="form-control" id="amount" placeholder="Enter Marketing Message"
-              [(ngModel)]="stactic.remarks" name="stactic.remarks">
+            <input type="text" class="form-control" placeholder="Enter Marketing Message"
+              [(ngModel)]="stactic.mkt_message" name="stactic.mkt_message">
           </div>
         </div>
         <div class="form-group">
           <div class="col-md-12">
-            <input type="text" class="form-control" id="amount" placeholder="Enter Notes"
-              [(ngModel)]="stactic.remarks" name="stactic.remarks">
+            <input type="text" class="form-control"  placeholder="Enter Notes"
+              [(ngModel)]="stactic.note" name="stactic.note">
           </div>
         </div>
 

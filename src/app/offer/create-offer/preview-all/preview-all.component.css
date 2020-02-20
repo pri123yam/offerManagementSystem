@@ -1,0 +1,32 @@
+.main
+{
+    background-color: #bebbbb;
+    border: none;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.sub
+{
+    background-color: #dbdbdb;
+    box-shadow: 5px 10px 8px  #6b6a6a;
+    
+}
+.sub:hover
+{
+    box-shadow: 10px 10px  4px #3f3e3e;
+}
+
+.list-group-item
+{
+    background-color: #dbdbdb;
+}
+
+.back{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.create{
+    margin-top: 5%;
+    margin-left: 72%
+}

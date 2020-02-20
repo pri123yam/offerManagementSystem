@@ -13,7 +13,7 @@ export class TacticSelectionComponent implements OnInit {
 
   alltactic = [];
   stactic: STactic = new STactic();
-
+  temp:any=[];
   //include Interactin Service for checking
   constructor(private tac: TacticService, private iservice: InteractionService, private dataService: CreateOfferDataService) { }
 
@@ -22,10 +22,21 @@ export class TacticSelectionComponent implements OnInit {
     console.log(this.dataService.getTacticData());
     this.tac.getAllTactics().subscribe(data => {
       this.alltactic = data;
+      console.log(this.alltactic);
     })
     this.stactic = this.dataService.getTacticData();
   }
+  setName(id : any)
+  {
+    //console.log(this.flag);
+    console.log(id); 
+    this.temp.push(id);
+ 
+  }
   tacticSubmission() {
+    // console.log(this.stactic.tactic);
+    this.stactic.tactic=this.temp;
+    console.log(this.stactic);  
     this.dataService.setTacticData(this.stactic);
   }
 }
