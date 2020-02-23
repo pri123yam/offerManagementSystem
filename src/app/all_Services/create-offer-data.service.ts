@@ -12,7 +12,7 @@ import { ValDate } from '../model/Vdate/valDate';
 export class CreateOfferDataService {
   private selectedBrandGeoData = new Model_Geo();
   private leaseData = new Lease();
-  private tacticData = new STactic;
+  private tacticData = new STactic();
   private validDate =new ValDate();
   setBrandGeoData(val : any){
     this.selectedBrandGeoData = val;

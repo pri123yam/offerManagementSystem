@@ -1,8 +1,8 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { STactic } from 'src/app/model/Tactic/select_tactic';
 import { TacticService } from 'src/app/all_Services/tactic.service';
-import { InteractionService } from 'src/app/interaction.service';
 import { CreateOfferDataService } from 'src/app/all_Services/create-offer-data.service';
+import { Lease } from 'src/app/model/Lease/lease';
 
 @Component({
   selector: 'app-tactic-selection',
@@ -13,30 +13,31 @@ export class TacticSelectionComponent implements OnInit {
 
   alltactic = [];
   stactic: STactic = new STactic();
-  temp:any=[];
-  //include Interactin Service for checking
-  constructor(private tac: TacticService, private iservice: InteractionService, private dataService: CreateOfferDataService) { }
+  lea : Lease=new Lease();
+  // isChecked:any;
+  constructor(private tac: TacticService, private dataService: CreateOfferDataService) { }
 
   ngOnInit() {
-
+    // this.dataService.setLeaseData(null);
+    console.log(this.stactic);
     console.log(this.dataService.getTacticData());
     this.tac.getAllTactics().subscribe(data => {
       this.alltactic = data;
-      console.log(this.alltactic);
     })
     this.stactic = this.dataService.getTacticData();
   }
-  setName(id : any)
-  {
-    //console.log(this.flag);
-    console.log(id); 
-    this.temp.push(id);
+  onCheck(id: string) {
+    console.log(event);
  
+    if (typeof this.stactic.tactic === 'undefined')
+      this.stactic.tactic = [id];
+    else
+      this.stactic.tactic.push(id);
+    console.log(this.stactic.tactic);
   }
   tacticSubmission() {
-    // console.log(this.stactic.tactic);
-    this.stactic.tactic=this.temp;
-    console.log(this.stactic);  
+    this.dataService.setLeaseData(this.lea);
     this.dataService.setTacticData(this.stactic);
+    console.log(this.stactic);
   }
 }

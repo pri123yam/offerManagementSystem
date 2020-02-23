@@ -1,13 +1,22 @@
 .main
 {
-    background-color: #bebbbb;
+    background-color: #EFEFEF;
     border: none;
-    box-shadow: 5px 10px 8px 10px #888888;
+    
+    box-shadow: 10px 10px 10px #7F7F7F;
 }
+
+.main:hover{
+    background-color: #F8F8F8;
+    box-shadow: 10px 10px 10px #7F7F7F;
+  }
 
 .sub
 {
     background-color: #dbdbdb;
+    border: none;
+    border-radius: 25px;    
+    transition-duration: 0.2s;
     box-shadow: 5px 10px 8px  #6b6a6a;
     
 }

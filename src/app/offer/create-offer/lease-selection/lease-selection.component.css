@@ -1,50 +1,53 @@
-/* .card{
-  border-radius: 5px;
-  perspective: 1px;
-  border-collapse: separate; 
+.card{
+  margin:5%;
+  border-radius: 25px;
+  background-color: #EFEFEF;
+  transition-duration: 0.4s;
+  border: none;
 }
-.menu
-{  
-    font-family: Segoe UI;
-    font-size: 16px;
-    color: white;
-
+.card:hover{
+  background-color: #F8F8F8;
+  box-shadow: 10px 10px 10px #7F7F7F;
+}
+.menu{
+  display: flex;
+  border-radius: 10px;
+  background-color: #D6D6D6;
 }
 
-.lease_container
-{
-    padding-right: 30px;
-    padding-left: 130px;
-    font-family: Segoe UI;
-    font-size: 18px;
-}*/
 a{
-  color: white;
+  color: black;
+  box-shadow: 2px 2px 2px #BCBCBC;
 }
-
 a:hover{
-  color : black;
+  background-color:#C7C6C6;
+  box-shadow: 10px 10px 10px #BCBCBC;
 }
 #lease{
   background-color:#C1C0C0;
-  /* border: 10px solid green; */
 }
-.prev-button {
-    position: absolute;
-    top : 120%;
-    bottom: 0px;
-    left: 20%;
-    transform: translateX(-50%);
-  }
-  .next-button
-  {
-    position: absolute;
-    top : 120%;
-    bottom: 0px;
-    left: 85%;
-    transform: translateX(-50%);
-  }
-  /*a
-  {
-    color: white;
-  } */
+#tactic{
+
+}
+
+.btn{
+  color: black;
+  background-color: #D8D6D6;
+  box-shadow: 1px 1px 1px #B7B6B6;
+  padding: 1%;
+  transition-duration: 0.5s;
+}
+.btn:hover{
+  box-shadow: 10px 10px 10px #ACABAB;
+}
+.next{
+  float:right;
+  margin-right:19%;
+}
+input:hover{
+  box-shadow: 10px 10px 10px #E3E3E3
+}
+select:hover{
+  box-shadow: 10px 10px 10px #E3E3E3
+}
+  
