@@ -3,8 +3,8 @@ export class Tactic{
     tacticId: number;
     tacticName: string;
     tacticType: number;
-    startDate: Moment;
-    endDate: Moment;
+    startDate: Date;
+    endDate: Date;
     monetaryAmt: number;
     nonMonetaryAmt: string;
     notes:string;

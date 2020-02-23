@@ -16,13 +16,13 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="startDate">Start Date</label>
-                <input type="datetime-local" name="tactic.startDate" [(ngModel)]="tactic.startDate" class="form-control"
-                    id="startDate" placeholder="DD/MM/YYYY, --:-- --">
+                <input type="date" name="tactic.startDate" [(ngModel)]="tactic.startDate" class="form-control"
+                    id="startDate" placeholder="DD/MM/YYYY">
             </div>
             <div class="form-group col-md-6">
                 <label for="endDate">End Date</label>
-                <input type="datetime-local" name="tactic.endDate" [(ngModel)]="tactic.endDate" class="form-control"
-                    id="endDate" placeholder="DD/MM/YYYY, --:-- --">
+                <input type="date" name="tactic.endDate" [(ngModel)]="tactic.endDate" class="form-control"
+                    id="endDate" placeholder="DD/MM/YYYY">
             </div>
         </div>
         <div class="form-row">
@@ -50,7 +50,7 @@
         </div>
         <p style="white-space: pre;">
         </p>
-        <div style="text-align:right;">
+        <div style="text-align:center;">
             <button type="submit" class="btn" (click)="submit()">Create</button>
         </div>
     </fieldset>

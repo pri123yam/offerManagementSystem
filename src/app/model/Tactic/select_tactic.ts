@@ -1,7 +1,9 @@
 export class STactic
 {
 
-    tactic : string;
+    tactic : string[];
     remarks : string;
+    mktMsg : string;
+    notes : string;
     constructor(){}
 } 

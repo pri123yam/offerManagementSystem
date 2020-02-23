@@ -1,9 +1,8 @@
 <div class="container">
-    <div class="row vehicle">
+    <div class="row geo">
         <fieldset class="row vehicle">
             <legend class="row vehicle">Vehicle Category Selection</legend>
             <div class="col-md-12">
-                <h4></h4>
                 <div class="form-group  ">
                     <select class="form-control" [(ngModel)]="selectedModelGeo.brand" id="brand" type="text"
                         (change)="onSelectBrand($event)" required>
@@ -31,19 +30,18 @@
     </div>
     <div class="row geo">
         <fieldset class="row vehicle">
-            <legend class="row vehicle"> Geography Selection</legend>
+            <legend class="row vehicle"> Geography Location Selection</legend>
             <div class="col-md-12">
-
-                <ng-multiselect-dropdown [placeholder]="'State'" [data]="sortedState"
+                <ng-multiselect-dropdown class="dropdown" [placeholder]="'State'" [data]="sortedState"
                     [(ngModel)]="selectedModelGeo.state" [settings]="dropdownSettings" (onSelect)="onSelectState()">
                 </ng-multiselect-dropdown>
                 <br>
-                <ng-multiselect-dropdown [placeholder]="'District'" [data]="sortedDistrict"
+                <ng-multiselect-dropdown class="dropdown" [placeholder]="'District'" [data]="sortedDistrict"
                     [(ngModel)]="selectedModelGeo.district" [settings]="dropdownSettings"
                     (onSelect)="onSelectDistrict()">
                 </ng-multiselect-dropdown>
                 <br>
-                <ng-multiselect-dropdown [placeholder]="'City'" [data]="sortedCity" [(ngModel)]="selectedModelGeo.city"
+                <ng-multiselect-dropdown class="dropdown" [placeholder]="'City'" [data]="sortedCity" [(ngModel)]="selectedModelGeo.city"
                     [settings]="dropdownSettings" (onSelect)="onSelectCity()">
                 </ng-multiselect-dropdown>
             </div>
@@ -52,11 +50,11 @@
 
     </div>
 
-    <div class="row next-button text-right">
+    <div class="row next-button text-center">
         <br>
 
         <div class="col-md-10">
-            <button class="btn btn-secondary btn-lg nav-item nav-link-edit " type="button" id="next-btn"
+            <button class="btn btn-secondary btn-lg" type="button" id="next-btn"
                 [routerLink]="['sLease']"
                 [disabled]="(!selectedModelGeo.brand || !selectedModelGeo.model || 
                     !selectedModelGeo.bodyModel) || !(selectedModelGeo.state || selectedModelGeo.district || selectedModelGeo.city)"

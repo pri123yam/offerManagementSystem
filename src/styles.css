@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #F5F5F5;}
+
+  .dropdown .multiselect-dropdown .dropdown-btn {
+    background-color: #ebebeb !important;
+    transition: all 0.3s;
+ }
+ .dropdown .multiselect-dropdown .dropdown-btn:hover{
+    background-color: #F4F2F2 !important;
+  box-shadow: 10px 10px 10px #7F7F7F !important;
+ }

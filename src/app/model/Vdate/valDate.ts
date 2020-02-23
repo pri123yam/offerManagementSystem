@@ -2,8 +2,8 @@ import { Moment } from 'moment';
 
 export class ValDate
 {
-    start : Moment;
-    end : Moment;
+    start : Date;
+    end : Date;
 
     constructor(){}
 }

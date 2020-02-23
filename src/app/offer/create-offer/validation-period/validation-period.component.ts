@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ValDate } from 'src/app/model/Vdate/valDate';
 import {Location} from '@angular/common';
+import { CreateOfferDataService } from 'src/app/all_Services/create-offer-data.service';
 
 
 @Component({
@@ -14,14 +15,17 @@ export class ValidationPeriodComponent implements OnInit {
 
   
 
-  constructor(private loc : Location) { }
+  constructor(private loc : Location,private dataService : CreateOfferDataService) { }
 
   ngOnInit() {
+
+      this.valid=this.dataService.getValDate();
   }
 
   check()
   {
     console.warn(this.valid);
+    this.dataService.setValidDate(this.valid);
     
   }
   goBack(){

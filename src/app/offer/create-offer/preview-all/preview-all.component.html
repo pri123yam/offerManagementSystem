@@ -1,14 +1,81 @@
-<div class="page-header">
-    <h2>
-        All The Selected Amount :
-    </h2>
+<div class="card">
+    <div class="card-body main">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="card-body sub">
+                    <h4>Bike Details:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">Brand : {{allModelGeo.brand}}</li>
+                        <li class="list-group-item list-group-item-secondary">Model : {{allModelGeo.model}}</li>
+                        <li class="list-group-item list-group-item-secondary">BodyModel : {{allModelGeo.bodyModel}}</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-body sub">
+                    <h4>Geography Details:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">State : {{allModelGeo.state}}</li>
+                        <li class="list-group-item list-group-item-secondary">District : {{allModelGeo.district}}</li>
+                        <li class="list-group-item list-group-item-secondary">City : {{allModelGeo.city}}</li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-body sub">
+                    <h4>Lease Details:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">Amount : {{lease.amount}}</li>
+                        <li class="list-group-item list-group-item-secondary">DownPayment : {{lease.downpayment}}</li>
+                        <li class="list-group-item list-group-item-secondary">Remaining Amount :
+                            {{lease.remainingAmount}}</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-body sub">
+                    <h4>Tactic Details:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">Tactic ID : {{tactic.tactic}}</li>
+                        <li class="list-group-item list-group-item-secondary">Remarks : {{tactic.remarks}}</li>
+                        <li class="list-group-item list-group-item-secondary">Marketing Message : {{tactic.mktMsg}}</li>
+                        <!-- <li class="list-group-item list-group-item-secondary">notes : {{tactic.notes}}</li> -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-body sub">
+                    <h4>Validation Details:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">Starting Date : {{validDate.start}}</li>
+                        <li class="list-group-item list-group-item-secondary">Ending Date : {{validDate.end}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4" >
-            <p>Brand</p>
-             <button (click)="showDetails()">Submit</button>
-        </div>
-    </div>
+<div class="row">
+    <button class="btn btn-secondary nav-item nav-link-edit back" type="button" id="prev-btn" (click)="goBack()"
+        style="color: white;">
+        << Edit Offer </button>
+            <button class="btn btn-secondary nav-item nav-link-edit create " type="button" id="next-btn"
+                style="color: white;" (click)="createOffer()">
+                Create Offer >>
+            </button>
 </div>
