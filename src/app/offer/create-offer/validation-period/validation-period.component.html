@@ -1,49 +1,4 @@
-  
-<!-- 
-<div class = "page-header val-head">
-   <h2>
-      Select The Validation Period :
-    </h2>
-</div>
-<div class="container validation_container">
-    <div class="row">
-        <div class="col-md-8">
-            
-            <form class="form-horizontal">
-              
-                <div class="form-group">
-                    <label class="control-label col-sm-4">Select Offer Start Date:</label>
-                    <div class="col-sm-6">
-                      <input type="date" class="form-control" id="start" placeholder="DD/MM/YYYY" [(ngModel)]="valid.start" name="valid.start">
-                    </div>
-                  </div>
-               
-                  <div class="form-group">
-                    <label class="control-label col-sm-4">Select Offer End Date:</label>
-                    <div class="col-sm-6">
-                      <input type="date" class="form-control" id="end" placeholder="DD/MM/YYYY" [(ngModel)]="valid.end" name="valid.end">
-                    </div>
-                  </div>
-            </form>
-        </div>
-    </div>
-  
-</div>
-  
-   <div class="row btn-container">
-    <div class="col-md-6 prev-button">        
-     <button class="btn btn-primary nav-item nav-link-edit " 
-         type="button" id="prev-btn"  (click)="goBack()" style="color: white;"> 
-         << Previous 
-     </button> 
- </div>
-  <div class="col-md-6 next-button">        
-     <button class="btn btn-primary nav-item nav-link-edit " 
-         type="button" id="next-btn"  [routerLink]="['../preview']" style="color: white;" (click)="check()"> 
-         Next >> 
-     </button> 
- </div>
-</div> -->
+
 
 <div class="card val-container">
   <div class="card-body">
@@ -84,26 +39,20 @@
 
     </div>
 
-
+    
     
   </div>
-</div>
 
-<div class="container button">
-  <!-- <div class="row">
-     <div class="col-md-12"> -->
-     <div class="prev-button">
-    <button class="btn btn-secondary nav-item nav-link-edit " type="button" id="prev-btn" (click)="goBack()">
-      << Previous </button> </div>
-      
-      
-      <div class= "next-button">
-        <button class="btn btn-secondary nav-item nav-link-edit " type="button" id="next-btn"
-          [routerLink]="['../preview']" style="color: white;" 
+  <div>
+    <button class="btn btn-secondary nav-item nav-link-edit prev-button " type="button" id="prev-btn" (click)="goBack()">
+      << Previous </button>
+
+        <button class="btn btn-secondary nav-item nav-link-edit next-button " type="button" id="next-btn"
+          [routerLink]="['../preview']"  
           [disabled]="(!valid.start || !valid.end)"  (click)="check()">
           Next >>
         </button>
-      </div>
-    <!-- </div>
-    </div>-->
-</div> 
+      </div>   
+  
+</div>
+

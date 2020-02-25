@@ -10,6 +10,7 @@
         <th>Non-monetary Amount</th>
         <th>Notes</th>
         <th>Messages</th>
+        <th>Creation Date</th>
         <th>Creation Time</th>
       </tr>
     </thead>
@@ -17,13 +18,14 @@
       <tr *ngFor="let tactic of tactics" >
         <td>{{tactic.tacticName}}</td>
         <td>{{tactic.tacticType}}</td>
-        <td>{{tactic.startDate}}</td>
-        <td>{{tactic.endDate}}</td>
+        <td>{{tactic.startDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{tactic.endDate | date: 'dd/MM/yyyy'}}</td>
         <td>{{tactic.monetaryAmt}}</td>
         <td>{{tactic.nonMonetaryAmt}}</td>
         <td>{{tactic.notes}}</td>
         <td>{{tactic.messages}}</td>
-        <td>{{tactic.tacticCreationTime}}</td>
+        <td>{{tactic.tacticCreationTime| date: 'dd/MM/yyyy'}}</td>
+        <td>{{tactic.tacticCreationTime| date:'h:mm a '}}</td>
       </tr>
     </tbody>
   </table>

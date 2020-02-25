@@ -1,14 +1,21 @@
-/* .dash
-{
-    background-color: #e8e8e8;
-    width: 100%;
-    height: auto;
-    bottom: 0px;
-    top: 0px;
-    left: 0;
-    position: absolute;
-} */
+
 
 .myrow{
   height: 100%
+}
+
+.container-fluid{
+  margin-top: 8% ;
+}
+
+.card
+{
+  filter: grayscale(100%);
+  box-shadow: 0 4px 8px 0 rgba(146, 141, 141, 0.897);
+  transition: 0.3s;
+}
+
+.card:hover {
+  filter: grayscale(50%);
+  box-shadow: 0 8px 16px 0 rgba(134, 130, 130, 0.945);
 }

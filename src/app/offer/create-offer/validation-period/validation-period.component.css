@@ -1,45 +1,51 @@
-/* .val-head
-{
-    margin-top: 0%;
-}
-.validation_container
-{
-    margin-top: 7%;
-} */
+
 
 .card-body
 {
     
-    box-shadow: 10px 10px 4px #888888;
+    background-color: #dbdbdb;
+    box-shadow: 10px 10px 8px #b9b7b7;
+    margin-left: 0%;
 }
 
 .card-body:hover {
    
-    box-shadow: -12px 12px 6px #817f7f;
-    border-radius: 1%;
+    box-shadow: 10px 10px 4px #b9b7b7;
+    border-radius: 15px;
 }
 
-.button
-{
-    margin-top: 6%;
-}
+
 .next-button
 {
-    margin-left: 80%;
-    /* margin-top: 6%; */
+    margin-left: 70%;
+    margin-top: 6%;
+    box-shadow: 5px 5px 1px #b9b7b7;
     
 }
 .prev-button
 {
-   /* margin-top: 7%; */
-    margin-left: 15%;
+   margin-top: 6%;
+    margin-left: 5%;
+    box-shadow: 5px 5px 1px #b9b7b7;
+}
+
+.next-button:hover{
+    
+    box-shadow: 8px 8px 3px #b9b7b7;
+   
+}
+
+.prev-button:hover{
+    
+    box-shadow: 8px 8px 3px #b9b7b7;
 }
 
 .val-container
 {
     margin-top: 10%;
     padding-right: 30px;
-    padding-left: 130px;
+    /* padding-left: 130px; */
+    margin-left: 5%;
     font-family: Arial;
     font-size: 18px;
     background-color: #F5F5F5;
