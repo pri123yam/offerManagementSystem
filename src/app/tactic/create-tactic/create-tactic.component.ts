@@ -13,11 +13,13 @@ export class CreateTacticComponent implements OnInit {
 
   tactic : Tactic = new Tactic();
   message : any;
+  date:any;
   
   constructor(private http : HttpClient) {
   }
 
   ngOnInit() {
+    this.date=new Date();
   }
   submit(){
     this.tactic.tacticCreationTime = moment();

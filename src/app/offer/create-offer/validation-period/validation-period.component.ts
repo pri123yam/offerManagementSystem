@@ -12,13 +12,14 @@ import { CreateOfferDataService } from 'src/app/all_Services/create-offer-data.s
 export class ValidationPeriodComponent implements OnInit {
 
   valid : ValDate =new ValDate();
-
+  date:any;
   
 
   constructor(private loc : Location,private dataService : CreateOfferDataService) { }
 
   ngOnInit() {
 
+      this.date=new Date();
       this.valid=this.dataService.getValDate();
   }
 
