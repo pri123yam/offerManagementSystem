@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { TacticService }  from 'src/app/all_Services/tactic.service';
 export interface Transaction {
   item: string;
@@ -14,6 +14,7 @@ export class ViewTacticComponent implements OnInit {
 
   constructor(private tacticService : TacticService) { }
   tactics = [];
+  searchText="";
   displayedColumns = ['item', 'cost'];
   transactions: Transaction[] = [
     {item: 'Beach ball', cost: 4},
@@ -33,5 +34,12 @@ export class ViewTacticComponent implements OnInit {
       this.tactics = res;
       console.log(this.tactics);
     })
+  }
+
+  myFunction()
+  {
+    // var x=document.getElementById("myInput");
+    // console.log(x);
+    console.log(this.searchText);
   }
 }

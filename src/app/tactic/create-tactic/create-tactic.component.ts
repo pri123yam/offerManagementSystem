@@ -1,8 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {Tactic} from 'src/app/model/Tactic/tactic';
 import * as moment from 'moment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import Swal from "sweetalert2";
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'Basic ' + btoa('pratik:pwd')
+  })
+};
 
 @Component({
   selector: 'app-create-tactic',
@@ -24,11 +31,12 @@ export class CreateTacticComponent implements OnInit {
   submit(){
     this.tactic.tacticCreationTime = moment();
     console.log(this.tactic);
-    let response =  this.http.post("http://localhost:8080/api/createTactic",this.tactic,{responseType:'text' as 'json'});
+    let response =  this.http.post("http://localhost:8080/api/createTactic",httpOptions);
+    console.log(response);
     response.subscribe(data => {
       this.message = data;
       if(this.message === "Succesful creation")
-      Swal.fire('success','Tactic Created','success');
+         Swal.fire('success','Tactic Created','success');
       else
       Swal.fire('failure','Tactic could not be Created','error');
       console.log(this.message);

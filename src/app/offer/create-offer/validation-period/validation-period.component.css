@@ -3,7 +3,7 @@
 .card-body
 {
     
-    background-color: #dbdbdb;
+    background-color: #F8F8F8;
     box-shadow: 10px 10px 8px #b9b7b7;
     margin-left: 0%;
 }
@@ -51,3 +51,17 @@
     background-color: #F5F5F5;
     border:none;
 }
+
+.form-check-input
+{
+    height: 20px;
+    width: 20px;
+    background: blanchedalmond;
+}
+
+input:hover{
+    box-shadow: 10px 10px 10px #E3E3E3
+  }
+  select:hover{
+    box-shadow: 10px 10px 10px #E3E3E3
+  }

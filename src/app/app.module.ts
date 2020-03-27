@@ -21,6 +21,10 @@ import { PreviewAllComponent } from './offer/create-offer/preview-all/preview-al
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { SignupComponent } from './signup/signup.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
@@ -39,13 +43,17 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     ValidationPeriodComponent,
     PreviewAllComponent,
     PageNotFoundComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    Ng2SearchPipeModule,
     BrowserAnimationsModule,
+    NgxPaginationModule,
+    NgxDatatableModule,
     NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],

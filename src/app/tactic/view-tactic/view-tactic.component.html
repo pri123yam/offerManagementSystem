@@ -1,4 +1,10 @@
-<div class="container">
+<div class="container-fluid">
+  <div class="col-md-5">
+    <div class="search-hero">
+      <input class="form-control" type="text and number and date " name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching " (change)="myFunction()">
+    </div>
+  </div>
+  
   <table class="table table-condensed table-hover table-bordered ">
     <thead class="thead-light">
       <tr>
@@ -15,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tactic of tactics" >
+      <tr *ngFor="let tactic of tactics | paginate: { itemsPerPage: 10, currentPage: p }| filter : searchText" >
         <td>{{tactic.tacticName}}</td>
         <td>{{tactic.tacticType}}</td>
         <td>{{tactic.startDate | date: 'dd/MM/yyyy'}}</td>
@@ -29,4 +35,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
