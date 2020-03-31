@@ -19,6 +19,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   // {path:'home', component: AppComponent},
   {path:'createoffer', component: CreateOfferComponent},
+  
   // {path:'createoffer/selectGeo', component: GeoSelectionComponent},
   {path:'createoffer/sLease', component: LeaseSelectionComponent},
   {path:'createoffer/sTactic', component: TacticSelectionComponent},

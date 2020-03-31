@@ -5,6 +5,7 @@
     box-shadow: 10px 10px 10px #7F7F7F;
     border-radius: 20px;
     transition-duration: 300ms;
+    
 }
 .form:hover{
     margin:5%;
